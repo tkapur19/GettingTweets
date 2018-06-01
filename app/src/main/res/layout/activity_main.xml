@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_head"
+
+        app:titleTextColor="#FDFEFE"
+        app:titleMarginStart="20dp"
+        android:textDirection="firstStrongLtr"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="56dp"
+
+
+
+        android:background="#3498DB"
+        >
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40sp"
+        android:layout_weight="0"
+        android:background="@drawable/edit_corner"
+        android:drawableLeft="@drawable/user"
+
+        android:padding="5dp"
+        android:drawablePadding="10dp"/>
+    <Button
+        android:drawableLeft="@drawable/twitter_logo"
+        android:drawablePadding="0dp"
+        android:background="@drawable/button_round"
+        android:layout_weight="0"
+        android:id="@+id/button1"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:text="Get Tweet"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="#FDFEFE"/>
+
+    <TextView
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4sp"
+        android:text="Latest Tweet"
+        android:layout_marginTop="20sp"
+        android:textStyle="bold"/>
+
+
+
+    <ScrollView
+        android:layout_marginTop="4sp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="4sp"
+        android:elevation="200dp"
+        android:background="#cfcfcf"
+        >
+
+
+        <GridLayout
+            android:layout_marginTop="4sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:rowCount="1"
+            android:columnCount="2">
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/profile_pic"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               app:civ_border_width="1dp"
+               android:src="@drawable/user"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="#020202"
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"/>
+
+                    <TextView
+                        android:id="@+id/screen_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"/>
+
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:scrollbars="horizontal"
+                    android:linksClickable="true"
+                    android:autoLink="web"
+
+
+                    android:textColor="#020202"
+                    android:padding="4dp"
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+        </GridLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/twitterlogo"
+        android:background="#3498DB"
+        android:layout_weight="0.25"
+        />
+
+
+
+</LinearLayout>
